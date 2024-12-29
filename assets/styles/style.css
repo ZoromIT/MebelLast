@@ -494,14 +494,14 @@ main {
     }
 
     .achievements h2 {
-        font-size: 8.5rem; /* Уменьшаем размер шрифта заголовка */    }
+        font-size: 3.5rem; /* Уменьшаем размер шрифта заголовка */    }
 
     .achievement-card h3 {
-        font-size: 1rem; /* Уменьшаем размер заголовка на мобильных */
+        font-size: 0.5rem; /* Уменьшаем размер заголовка на мобильных */
     }
 
     .achievement-card p {
-        font-size: 1rem; /* Увеличиваем размер текста на мобильных */
+        font-size: 0.8rem; /* Увеличиваем размер текста на мобильных */
     }
 }
 
@@ -730,7 +730,6 @@ main {
 }
 
 /* nothing */
-
 .nothing-inner {
     display: flex;
     align-items: center; /* Вертикальное центрирование */
@@ -743,7 +742,7 @@ main {
     box-sizing: border-box; /* Учитываем padding в общей ширине */
 }
 
-.nothing-inner div {
+.form-container {
     flex: 0 1 auto; /* Элементы адаптируются под размер родителя */
     width: 50%; /* Устанавливаем одинаковую ширину для блока и изображения */
     max-width: 546px; /* Ограничение максимальной ширины */
@@ -752,22 +751,30 @@ main {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
-.nothing-inner div p {
-    margin: 20px 0; /* Отступ сверху и снизу */
-    font-size: clamp(18px, 3vw, 46px); /* Адаптивный размер текста */
-    line-height: 1.2;
-    font-weight: 400;
-    color: var(--black);
-    max-width: 330px; /* Ограничение ширины текста */
-    text-align: center;
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+.form-container input,
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    box-sizing: border-box;
 }
 
 .nothing-inner img {
@@ -790,9 +797,7 @@ main {
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-   
 }
-
 
 .nothing-inner button:hover {
     background-color: #0056b3;
@@ -810,7 +815,7 @@ main {
         gap: 8px; /* Уменьшение расстояния между элементами */
     }
 
-    .nothing-inner div,
+    .form-container,
     .nothing-inner img {
         width: 45%; /* Немного уменьшаем ширину на экранах планшетов */
     }
@@ -827,7 +832,7 @@ main {
         justify-content: space-between; /* Разделяем элементы */
     }
 
-    .nothing-inner div,
+    .form-container,
     .nothing-inner img {
         width: 100%; /* Элементы занимают всю ширину экрана */
         max-width: none; /* Убираем ограничение ширины */
@@ -839,6 +844,7 @@ main {
         padding: 8px 16px; /* Уменьшаем размеры кнопки на мобильных */
     }
 }
+
 
 
 
@@ -871,15 +877,15 @@ main {
 /* Адаптивность для мобильных устройств */
 @media (max-width: 1024px) {
     .contact-info {
-        font-size: 18px; /* Уменьшаем размер шрифта на планшетах */
+        font-size: 15px; /* Уменьшаем размер шрифта на планшетах */
         padding: 8px 15px; /* Уменьшаем отступы */
     }
 }
 
 @media (max-width: 768px) {
     .contact-info {
-        font-size: 16px; /* Еще уменьшаем размер шрифта для мобильных устройств */
-        padding: 6px 10px; /* Уменьшаем отступы */
+        font-size: 12px; /* Еще уменьшаем размер шрифта для мобильных устройств */
+        padding: 3px 8px; /* Уменьшаем отступы */
     }
 }
 
